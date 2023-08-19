@@ -4,19 +4,21 @@ provider "aws" {
   secret_key = "zUfC4873Sj/hoydIow8U2XIhRkY9IiW1WKY4YlWE"
 }
 
-# Create a bucket
+# Creating a bucket
 /* resource "aws_s3_bucket" "web" {
-
-  bucket = "s3bucketviaterraform"
-
-  acl    = "private"   # or can be "public-read"
-
+      bucket = "s3bucketviaterraform"
+      acl    = "private"   # or can be "public-read"
   tags = {
-
     Name        = "My bucket"
+    Environment = "Dev" 
+  } */
 
-    Environment = "Dev" */
-
+#creating an ec2 instance
+resource "aws_instance" "web" {
+  ami           = "ami-024e6efaf93d85776"
+  instance_type = "t2.micro"
+  key_name      = "KeyPair4alltools"
+  tags = {
+    Name = "ec2viaterraform"
   }
-
 }
