@@ -5,7 +5,7 @@ provider "aws" {
 }
 
 # Create a bucket
-resource "aws_s3_bucket" "web" {
+/* resource "aws_s3_bucket" "web" {
 
   bucket = "s3bucketviaterraform"
 
@@ -15,7 +15,7 @@ resource "aws_s3_bucket" "web" {
 
     Name        = "My bucket"
 
-    Environment = "Dev"
+    Environment = "Dev" */
 
   }
 
