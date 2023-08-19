@@ -11,14 +11,15 @@ provider "aws" {
   tags = {
     Name        = "My bucket"
     Environment = "Dev" 
-  } */
+  }  */
 
 #creating an ec2 instance
-resource "aws_instance" "web" {
+  resource "aws_instance" "web" {
   ami           = "ami-024e6efaf93d85776"
   instance_type = "t2.micro"
   key_name      = "KeyPair4alltools"
+  acl           = "private"
   tags = {
     Name = "ec2viaterraform"
-  }
+  } 
 }
