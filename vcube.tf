@@ -18,7 +18,6 @@ provider "aws" {
   ami           = "ami-024e6efaf93d85776"
   instance_type = "t2.micro"
   key_name      = "KeyPair4alltools"
-#  acl           = "public-read"
   tags = {
     Name = "ec2viaterraform"
   } 
