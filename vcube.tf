@@ -7,7 +7,7 @@ provider "aws" {
 
 
 #creating an ec2 instance
-  resource "aws_instance" "web" {
+  resource "aws_instance" "ec2" {
   ami           = "ami-024e6efaf93d85776"
   instance_type = "t2.micro"
   key_name      = "KeyPair4alltools"
